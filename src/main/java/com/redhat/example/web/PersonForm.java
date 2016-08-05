@@ -8,6 +8,6 @@ import com.redhat.example.model.Person;
 public class PersonForm extends Person {
 
 	public Person toEntity() {
-		return new Person(null, getFirstName(), getLastName());
+		return new Person(getId(), getFirstName(), getLastName());
 	}
 }

@@ -10,13 +10,13 @@ import javax.validation.constraints.Size;
 @Entity
 public class Person {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-	String id;
+	int id;
 	String firstName;
 	String lastName;
 	
 	public Person() {}
 	
-	public Person(String id, String firstName, String lastName) {
+	public Person(int id, String firstName, String lastName) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -42,11 +42,11 @@ public class Person {
 		this.lastName = lastName;
 	}
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

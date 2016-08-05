@@ -10,7 +10,7 @@ import javax.persistence.Id;
 @Entity
 public class TraceRecord {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-	String id;
+	int id;
 	Date date;
 	String message;
 	
@@ -21,17 +21,17 @@ public class TraceRecord {
 		this.message = message;
 	}
 	
-	public TraceRecord(String id, Date date, String message) {
+	public TraceRecord(int id, Date date, String message) {
 		this.id = id;
 		this.date = date;
 		this.message = message;
 	}
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
